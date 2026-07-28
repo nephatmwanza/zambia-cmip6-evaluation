@@ -38,8 +38,12 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-SRC=${CMIP6_SRC:-/home/corban/Zambia_CMIP6}
-CHIRPS=${CHIRPS_NC:-/home/corban/Zambia_Climate_Extremes/data/processed/chirps_zambia_1981_present.nc}
+# Both inputs are large and are not committed. Either place them at these paths or
+# point the environment variables somewhere else:
+#   CMIP6_SRC   directory holding Historical/M*_Hist.nc and SSP585/M*_fut85.nc
+#   CHIRPS_NC   the Zambia-clipped CHIRPS daily file, from the companion rainfall study
+SRC=${CMIP6_SRC:-data/raw/cmip6}
+CHIRPS=${CHIRPS_NC:-data/raw/chirps_zambia_daily.nc}
 OUT=data/processed
 TMP=data/processed/tmp
 mkdir -p "$OUT/hist" "$OUT/ssp585" "$TMP"

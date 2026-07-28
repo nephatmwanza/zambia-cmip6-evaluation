@@ -40,7 +40,8 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-CHIRPS=${CHIRPS_NC:-/home/corban/Zambia_Climate_Extremes/data/processed/chirps_zambia_1981_present.nc}
+# Not committed; set CHIRPS_NC or place the file here. See the companion rainfall study.
+CHIRPS=${CHIRPS_NC:-data/raw/chirps_zambia_daily.nc}
 IN=data/processed
 OUT=data/processed/indices
 TMP=data/processed/tmp
