@@ -1,0 +1,22 @@
+# Raw CMIP6 downloads (~8 GB) — see scripts/01_prepare_data notes for provenance
+data/raw/
+
+# Regridded daily model files (~5.5 GB). Rebuild with scripts/01_preprocess_cmip6.sh
+data/processed/hist/
+data/processed/ssp585/
+
+# Working intermediates
+data/processed/tmp/
+data/processed/agg_tmp/
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+env/
+
+# OS / editor
+.DS_Store
+.claude/
+*.swp
